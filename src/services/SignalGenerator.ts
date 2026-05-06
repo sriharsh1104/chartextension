@@ -22,7 +22,7 @@ export class SignalGenerator {
     let totalPatterns = 0;
 
     for (const tf of timeframes) {
-      const klines = await DataFetcher.fetchBinanceKlines(symbol, tf, 50);
+      const klines = await DataFetcher.fetchKlines(symbol, tf, 50);
       const patterns = PatternAnalyzer.analyzeKlines(klines);
       timeframeMatches[tf] = patterns;
       
