@@ -1,0 +1,163 @@
+.signal-dashboard {
+  background: #161b22;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px;
+  border: 1px solid #30363d;
+  color: #e6edf3;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.signal-dashboard.loading {
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  color: #8b949e;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+.signal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #30363d;
+  padding-bottom: 10px;
+}
+
+.signal-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.timeframe-badge {
+  background: rgba(38, 166, 154, 0.1);
+  color: #26a69a;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.signal-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.signal-type {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.signal-type h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.icon-buy { color: #26a69a; }
+.icon-sell { color: #ef5350; }
+.icon-hold { color: #8b949e; }
+
+.signal-confidence {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  width: 50%;
+}
+
+.confidence-bar {
+  width: 100%;
+  height: 8px;
+  background: #0d1117;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.confidence-fill {
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+.confidence-text {
+  font-size: 0.8rem;
+  color: #8b949e;
+}
+
+.signal-reason {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #c9d1d9;
+  line-height: 1.4;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 10px;
+  border-radius: 6px;
+  border-left: 3px solid #30363d;
+}
+
+.signal-dashboard.buy .signal-reason { border-left-color: #26a69a; }
+.signal-dashboard.short .signal-reason { border-left-color: #ef5350; }
+
+.timeframe-breakdown h4 {
+  margin: 0 0 10px 0;
+  font-size: 0.9rem;
+  color: #8b949e;
+}
+
+.tf-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tf-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.tf-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #c9d1d9;
+  width: 30px;
+  padding-top: 3px;
+}
+
+.tf-patterns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  flex: 1;
+}
+
+.pattern-tag {
+  font-size: 0.7rem;
+  padding: 3px 8px;
+  border-radius: 12px;
+  background: #30363d;
+  color: #c9d1d9;
+}
+
+.pattern-tag.bullish {
+  background: rgba(38, 166, 154, 0.15);
+  color: #26a69a;
+}
+
+.pattern-tag.bearish {
+  background: rgba(239, 83, 80, 0.15);
+  color: #ef5350;
+}

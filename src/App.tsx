@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { TradingViewWidget } from './components/TradingViewWidget';
+import { SignalDashboard } from './components/SignalDashboard';
 import './App.css';
 
 const TRADING_PAIRS = [
@@ -39,9 +40,14 @@ function App() {
         </select>
       </div>
 
-      <main className="main-content">
-        <TradingViewWidget key={activePair.symbol} symbol={activePair.symbol} />
-      </main>
+      <div className="dashboard-layout">
+        <div className="chart-section">
+          <TradingViewWidget key={activePair.symbol} symbol={activePair.symbol} />
+        </div>
+        <div className="sidebar-section">
+          <SignalDashboard symbol={activePair.symbol} />
+        </div>
+      </div>
     </div>
   );
 }
