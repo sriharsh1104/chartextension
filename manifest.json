@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Trading Chart Signals",
+  "version": "1.0.0",
+  "description": "Chrome extension displaying a trading chart with up/down signals",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Trading Chart"
+  },
+  "permissions": []
+}
